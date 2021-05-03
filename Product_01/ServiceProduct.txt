@@ -1,0 +1,55 @@
+
+//Read 
+API for get all the Product details in the database (GET Request)
+Resource: ProductService
+Request: GET ServiceProduct/ProductService
+Responce: HTML table with Product_Code,Prod_Name, Contributors,Email,Price
+ 
+
+//Insert
+API for register Product to the database (POST Request)
+Resource: ProductService
+Request: POST ServiceProduct/ProductService
+Media: Application form Url Encoded
+Data: {
+	“Product_Code”: “<Product_Code>”,
+        “ProdName”: “<ProdName >”,
+	“Contributors”: “<Contributors>”,
+	“Email”: “<Email>”,
+         “Price”: “<Price>”
+ }
+Response:  {  result = “Insertion Success” }
+                   {  error =  “Error while insert” }
+
+
+
+//Delete
+API for Delete Product to the database (DELETE Request)
+Resource: ProductService
+Request: DELETE ServiceProduct/ProductService
+Media: Application XML
+Data:
+<productsData>
+ <Prod_ID>"<Prod_ID>"</Prod_ID>
+</productsData> 
+Response:   {  result = “Successfully product Details Deleted” }
+                   {  error =  “Error while deleting” }
+
+
+
+//Update
+API for Update Product to the database (PUT Request)
+Resource: ProductService
+Request: PUT ServiceProduct/ProductService
+Media: Application JSON
+Data:
+  {     “Prod_ID”:”<Prod_ID>”
+  	“Product_Code”: “<Product_Code>”,
+        “ProdName”: “<ProdName >”,
+	“Contributors”: “<Contributors>”,
+	“Email”: “<Email>”,
+         “Price”: “<Price>”
+   }
+Response: {  result = “Successfully Product Detail Updated” }
+                 {  error =  “Error while updating” }
+
